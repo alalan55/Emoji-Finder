@@ -1,5 +1,7 @@
 # emoji-finder
 
+Emoji Finder
+
 ## Project setup
 ```
 npm install

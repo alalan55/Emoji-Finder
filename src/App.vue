@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <HomeTemplate :data="emojiData"/>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Emoji from '@/data/emoji.js'
+import HomeTemplate from '@/components/template/HomeTemplate.vue'
+import { ref } from 'vue';
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    HomeTemplate
   },
+
+  setup(){
+    let emojiData = ref([])
+    
+     const initData = () =>{
+       emojiData.value = Emoji
+     }
+
+     initData();
+
+     return{
+       emojiData
+     }
+  }
 };
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
