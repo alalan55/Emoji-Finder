@@ -1,6 +1,7 @@
-# emoji-finder
+# Emoji Finder
 
-Emoji Finder
+Projeto desenvolvido com vue3 e composition API. Foi utilizado como exemplo o projeto <a href="https://www.kekfinder.ml/" target="_blak">KekFinder</a>💙, o mesmo sendo utilizado a lib ReactJs
+
 
 ## Project setup
 ```
