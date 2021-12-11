@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
 input {
   padding: 0.8rem;
-  width: 80%;
+  width: 100%;
   border-radius: 5px;
   border: none;
   -webkit-box-shadow: 0px 10px 8px -1px rgba(0, 0, 0, 0.11);
