@@ -6,7 +6,7 @@
       <div class="input">
         <Input @searchEmoji="pesquisarEmoji" />
       </div>
-      
+
       <div class="container-cards" v-if="emojiValue.length > 0">
         <Card
           v-for="dados in dadosFiltrados"
@@ -16,21 +16,26 @@
       </div>
     </div>
     <Footer />
+    <BtnToTop />
   </div>
 </template>
 
 <script>
+import { ref } from "vue";
+
 import Input from "@/components/atoms/Input.vue";
 import Card from "@/components/molecules/Card.vue";
 import Descriptions from "@/components/molecules/Descriptions.vue";
 import Footer from "@/components/molecules/Footer.vue";
-import { ref } from "vue";
+import BtnToTop from "@/components/atoms/ButtonToTop.vue";
+
 export default {
   components: {
     Input,
     Card,
     Descriptions,
     Footer,
+    BtnToTop,
   },
   props: {
     data: { type: Array },
@@ -64,8 +69,9 @@ export default {
   min-height: 100vh;
   padding: 4rem 1rem 1rem 1rem;
   background: #eaedf0;
+ 
 
-  .conteudo{
+  .conteudo {
     max-width: 70%;
     margin: 0 auto;
     .descriptions {
@@ -73,12 +79,12 @@ export default {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-  
+
       span {
         display: block;
         margin: 0.5rem 0;
       }
-  
+
       .title {
         font-weight: 700;
         font-size: 1.5em;
@@ -105,8 +111,8 @@ export default {
   }
 }
 
-@media screen and (max-width: 650px){
-  .conteudo{
+@media screen and (max-width: 650px) {
+  .conteudo {
     max-width: 100% !important;
   }
 }
