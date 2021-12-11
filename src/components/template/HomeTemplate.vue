@@ -64,39 +64,50 @@ export default {
   min-height: 100vh;
   padding: 4rem 1rem 1rem 1rem;
   background: #eaedf0;
-  .descriptions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    span {
-      display: block;
-      margin: 0.5rem 0;
+  .conteudo{
+    max-width: 70%;
+    margin: 0 auto;
+    .descriptions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      span {
+        display: block;
+        margin: 0.5rem 0;
+      }
+  
+      .title {
+        font-weight: 700;
+        font-size: 1.5em;
+      }
+      .sub-title {
+        font-weight: 500;
+      }
     }
-
-    .title {
-      font-weight: 700;
-      font-size: 1.5em;
+    .input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 60%;
+      margin: 1.5rem auto;
     }
-    .sub-title {
-      font-weight: 500;
+    .container-cards {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
     }
   }
+}
 
-  .input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1.5rem 0;
-  }
-  .container-cards {
-    margin-top: 2.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
+@media screen and (max-width: 650px){
+  .conteudo{
+    max-width: 100% !important;
   }
 }
 </style>
