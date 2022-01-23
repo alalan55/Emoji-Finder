@@ -5,7 +5,7 @@
       <BtnsTheme class="btns-theme" @changeTheme="changeTheme" />
 
       <div class="input">
-        <Input @searchEmoji="pesquisarEmoji" />
+        <Input @searchEmoji="pesquisarEmoji" :theme="!themeStyle" />
       </div>
 
       <div class="container-cards" v-if="emojiValue.length > 0">
@@ -18,7 +18,7 @@
       </div>
     </div>
     <Footer :theme="!themeStyle" />
-    <BtnToTop />
+    <BtnToTop :theme="!themeStyle"/>
   </div>
 </template>
 
@@ -79,7 +79,6 @@ export default {
   width: 100%;
   min-height: 100vh;
   padding: 4rem 1rem 1rem 1rem;
-  // background: #202020;
   background: #eaedf0;
 
   .conteudo {
