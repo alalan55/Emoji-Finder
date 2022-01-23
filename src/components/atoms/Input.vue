@@ -1,5 +1,5 @@
 <template>
-  <input type="text" v-model="emoji" @keyup="pesquisarEmoji" />
+  <input type="text" v-model="emoji" @input="pesquisarEmoji" />
 </template>
 
 <script>

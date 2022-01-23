@@ -2,6 +2,7 @@
   <div class="home-template">
     <div class="conteudo">
       <Descriptions />
+      <BtnsTheme class="btns-theme"/>
 
       <div class="input">
         <Input @searchEmoji="pesquisarEmoji" />
@@ -28,14 +29,17 @@ import Card from "@/components/molecules/Card.vue";
 import Descriptions from "@/components/molecules/Descriptions.vue";
 import Footer from "@/components/molecules/Footer.vue";
 import BtnToTop from "@/components/atoms/ButtonToTop.vue";
+import BtnsTheme from '@/components/molecules/BtnsTheme.vue'
 
 export default {
   components: {
     Input,
     Card,
     Descriptions,
+    BtnsTheme,
     Footer,
     BtnToTop,
+
   },
   props: {
     data: { type: Array },
@@ -68,6 +72,7 @@ export default {
   width: 100%;
   min-height: 100vh;
   padding: 4rem 1rem 1rem 1rem;
+  // background: #202020;
   background: #eaedf0;
  
 
@@ -107,6 +112,9 @@ export default {
       align-items: center;
       justify-content: center;
       gap: 1.2rem;
+    }
+    .btns-theme{
+      margin: 1.5rem 0;
     }
   }
 }
