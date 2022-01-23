@@ -47,7 +47,7 @@ export default {
   setup(props) {
     let dadosFiltrados = ref([]);
     let emojiValue = ref("");
-    let themeStyle = ref(undefined);
+    let themeStyle = ref(true);
     let datas = [];
     datas.push(props.data);
 

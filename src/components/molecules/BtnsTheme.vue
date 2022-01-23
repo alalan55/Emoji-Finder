@@ -3,7 +3,7 @@
     <div class="btns">
       <figure
         class="light"
-        :class="{ active: themeColor }"
+        :class="{ active_light: themeColor }"
         @click="changeTheme"
       >
         <svg
@@ -13,7 +13,7 @@
           height="44"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#ffffff"
+          stroke="#fff"
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -28,7 +28,7 @@
 
       <figure
         class="dark"
-        :class="{ active: !themeColor }"
+        :class="{ active_dark: !themeColor }"
         @click="changeTheme"
       >
         <svg
@@ -87,7 +87,7 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgb(97, 96, 96);
+      background: rgb(82, 82, 82);
       cursor: pointer;
       transition: 0.2s ease-in-out;
          
@@ -102,8 +102,13 @@ export default {
     }
   }
 }
-.active {
+.active_light {
   background: rgb(168, 165, 165) !important;
-//   border: 1px solid;
+//   .icon{
+//       filter: invert(88%) sepia(21%) saturate(5319%) hue-rotate(360deg) brightness(103%) contrast(109%);
+//   }
+}
+.active_dark{
+    background: rgb(168, 165, 165) !important;
 }
 </style>
