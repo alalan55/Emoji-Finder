@@ -1,8 +1,8 @@
 <template>
-  <div class="home-template">
+  <div class="home-template" :class="{ darkMode: !themeStyle }">
     <div class="conteudo">
       <Descriptions />
-      <BtnsTheme class="btns-theme"/>
+      <BtnsTheme class="btns-theme" @changeTheme="changeTheme" />
 
       <div class="input">
         <Input @searchEmoji="pesquisarEmoji" />
@@ -13,10 +13,11 @@
           v-for="dados in dadosFiltrados"
           :key="dados.title"
           :value="dados"
+          :theme="!themeStyle"
         />
       </div>
     </div>
-    <Footer />
+    <Footer :theme="!themeStyle" />
     <BtnToTop />
   </div>
 </template>
@@ -29,7 +30,7 @@ import Card from "@/components/molecules/Card.vue";
 import Descriptions from "@/components/molecules/Descriptions.vue";
 import Footer from "@/components/molecules/Footer.vue";
 import BtnToTop from "@/components/atoms/ButtonToTop.vue";
-import BtnsTheme from '@/components/molecules/BtnsTheme.vue'
+import BtnsTheme from "@/components/molecules/BtnsTheme.vue";
 
 export default {
   components: {
@@ -39,7 +40,6 @@ export default {
     BtnsTheme,
     Footer,
     BtnToTop,
-
   },
   props: {
     data: { type: Array },
@@ -47,6 +47,7 @@ export default {
   setup(props) {
     let dadosFiltrados = ref([]);
     let emojiValue = ref("");
+    let themeStyle = ref(undefined);
     let datas = [];
     datas.push(props.data);
 
@@ -58,10 +59,16 @@ export default {
       });
     };
 
+    const changeTheme = (e) => {
+      themeStyle.value = e;
+    };
+
     return {
       pesquisarEmoji,
       dadosFiltrados,
       emojiValue,
+      changeTheme,
+      themeStyle,
     };
   },
 };
@@ -74,7 +81,6 @@ export default {
   padding: 4rem 1rem 1rem 1rem;
   // background: #202020;
   background: #eaedf0;
- 
 
   .conteudo {
     max-width: 70%;
@@ -113,9 +119,17 @@ export default {
       justify-content: center;
       gap: 1.2rem;
     }
-    .btns-theme{
+    .btns-theme {
       margin: 1.5rem 0;
     }
+  }
+}
+.darkMode {
+  background: rgb(32, 32, 32);
+  color: white;
+
+  a {
+    color: white;
   }
 }
 
