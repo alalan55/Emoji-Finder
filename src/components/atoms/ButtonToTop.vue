@@ -1,5 +1,5 @@
 <template>
-  <button ref="button" @click="topPage">
+  <button ref="button" @click="topPage" :class="{ darkMode: theme }">
     <i class="fas fa-arrow-up"></i>
   </button>
 </template>
@@ -7,6 +7,9 @@
 <script>
 import { ref, onMounted } from "vue";
 export default {
+   props: {
+     theme: {type: Boolean}
+  },
   setup() {
     const button = ref(null);
 
@@ -63,6 +66,15 @@ button {
   &:hover {
     -webkit-box-shadow: 0px 10px 8px -1px rgba(0, 0, 0, 0.18);
     box-shadow: 0px 10px 8px -1px rgba(0, 0, 0, 0.18);
+  }
+}
+
+.darkMode {
+  background: rgb(22, 22, 22)  !important;
+  color: white;
+
+  i{
+    color: white !important;
   }
 }
 </style>

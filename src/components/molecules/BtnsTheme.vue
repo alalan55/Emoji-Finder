@@ -50,7 +50,6 @@
             d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
           />
         </svg>
-        
       </figure>
     </div>
   </div>
@@ -85,7 +84,7 @@ export default {
     border-radius: 25px;
     overflow: hidden;
     -webkit-box-shadow: 0px 10px 8px -1px rgba(0, 0, 0, 0.1);
-      box-shadow: 0px 10px 8px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 8px -1px rgba(0, 0, 0, 0.1);
 
     figure {
       width: 100%;
@@ -96,7 +95,6 @@ export default {
       padding: 0 0.5rem;
       cursor: pointer;
       transition: 0.2s ease-in-out;
-      
 
       &:hover {
         background: rgb(148, 144, 144);
@@ -117,8 +115,9 @@ export default {
 }
 .active_dark {
   background: rgb(58, 57, 57) !important;
-   .icon {
-    filter: invert(69%) sepia(89%) saturate(2110%) hue-rotate(131deg) brightness(92%) contrast(101%);
+  .icon {
+    filter: invert(69%) sepia(89%) saturate(2110%) hue-rotate(131deg)
+      brightness(92%) contrast(101%);
   }
 }
 </style>

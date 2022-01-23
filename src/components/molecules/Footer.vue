@@ -3,7 +3,7 @@
     <div class="footer">
       <span>
         Template inspirado no projeto
-        <a href="https://www.kekfinder.ml/" target="_blak">KekFinder</a> 💙
+        <a href="https://www.kekfinder.ml/" target="_blank">KekFinder</a> 💙
       </span>
     </div>
   </footer>
