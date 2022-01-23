@@ -1,5 +1,5 @@
 <template>
-  <div class="card" @click="copiar">
+  <div class="card" @click="copiar" :class="{ darkMode: theme }">
     <div class="imagem">
       <span>{{ value.symbol }}</span>
 
@@ -21,6 +21,7 @@ import { ref } from "vue";
 export default {
   props: {
     value: { type: Object },
+    theme: {type: Boolean}
   },
   setup() {
     let copied = ref(false);
@@ -90,5 +91,10 @@ export default {
       font-size: 0.7em;
     }
   }
+}
+
+.darkMode{
+  background: rgb(22, 22, 22) !important;
+  color: white;
 }
 </style>
