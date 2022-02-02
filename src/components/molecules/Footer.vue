@@ -35,8 +35,11 @@ export default {
   }
 }
 .darkMode{
-  a{
-    color: white;
+  span{
+
+    a{
+      color: white;
+    }
   }
 }
 </style>
