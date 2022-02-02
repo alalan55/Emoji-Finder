@@ -5,6 +5,10 @@
         Template inspirado no projeto
         <a href="https://www.kekfinder.ml/" target="_blank">KekFinder</a> 💙
       </span>
+       <span>
+        desenvolvido por
+        <a href="https://github.com/alalan55" target="_blank">👽 Y0SHYY</a>
+      </span>
     </div>
   </footer>
 </template>
@@ -20,10 +24,14 @@ export default {
   margin: 1.5rem 0;
   text-align: center;
   font-size: 0.8em;
-  a {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
+  span{
+    display: block;
+    margin: .5rem 0;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
   }
 }
 .darkMode{
